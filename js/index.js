@@ -5,6 +5,7 @@
 const colorNavTitleHover = document.querySelector(".logo-heading");
 
 colorNavTitleHover.addEventListener("mouseenter", (touch) => {
+    // touch.stopPropagation();
     if (touch.target.style.color === "black"){
         touch.target.style.color = "red";
     } else {
@@ -20,6 +21,7 @@ colorNavTitleHover.addEventListener("mouseleave", function() {
 const navListClick = document.querySelectorAll(".nav a");
 
 navListClick.forEach((el) => {
+    // el.preventDefault();
     el.addEventListener("click", function(){
         el.style.textDecoration = "underline";
         el.style.color = "red";
